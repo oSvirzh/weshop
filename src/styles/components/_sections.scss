@@ -1,0 +1,8 @@
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &_gray {
+    background-color: $background-gray-color;
+  }
+}

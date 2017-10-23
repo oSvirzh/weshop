@@ -1,0 +1,121 @@
+.product-item {
+  @include span(3);
+
+  position: relative;
+
+  height: 340px;
+
+  margin-bottom: 20px;
+
+  &__img-wrap {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img-outer {
+    padding-bottom: 100%;
+  }
+
+  &__img-inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    background-image: url("http://via.placeholder.com/270x340");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &__action {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+
+    border: 1px solid $main-blue-color;
+
+    &:hover {
+      background-color: $main-blue-color;
+
+      .svg-icon {
+        fill: $light-gray-color;
+      }
+
+      .product-item__text {
+        display: block;
+      }
+
+      .product-item__icon {
+        border-left: 1px solid $light-gray-color;
+      }
+    }
+
+    &::before {
+      content:"";
+
+      position:absolute;
+      top:0;
+      left:0;
+
+      width: 0;
+      height: 0;
+
+      border-style: solid;
+      border-width: 10px 10px 0 0;
+      border-color: $main-blue-color transparent transparent transparent;
+    }
+
+    &_to-card {
+      bottom: 30px;
+    }
+
+    &_like {
+      bottom: 85px;
+    }
+
+    &_views {
+      bottom: 140px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    width: 40px;
+    height: 35px;
+  }
+
+  &__text {
+    display: none;
+    padding: 10px 12px;
+
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+  &__price {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: $main-blue-color;
+
+    padding: 10px 12px;
+
+    font-size: 14px;
+    font-weight: 200;
+  }
+}

@@ -1,0 +1,24 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  max-width: 1140px;
+}
+
+.row {
+  display: flex;
+  margin-right: -15px;
+  margin-left:  -15px;
+
+  &_wrap {
+    flex-wrap: wrap;
+  }
+}
+
+@mixin span($qty: 4, $columns: 12, $gutter: $gutter) {
+  width: calc(#{percentage($qty/$columns)} - #{$gutter * 2});
+  margin-left: $gutter;
+  margin-right: $gutter;
+}

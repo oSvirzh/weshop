@@ -1,0 +1,110 @@
+main.main
+    section
+        .container
+            +b.main-banner
+                +e.container.swiper-container.js-banner-slider
+                    +e.wrapper.swiper-wrapper
+                        +e.slide.swiper-slide
+                            +e.info
+                                h1 fashion is nothing
+                                h2 but mischief
+                                +e.link.button.button_filled Shop now
+    section.section.section_gray
+        .container
+            .row
+                +b.action
+                    +e.text
+                +b.action
+                    +e.text
+            .advantages-list
+                .row
+                    +b.advantage
+                        +e.icon
+                            svg(class="svg-icon svg-icon-headphones")
+                                use(xlink:href='#headphones')
+                        +e.body
+                            +e.H2.title 24/7 Hour Support
+                            +e.P.desc Our online support section is available and regularly updated if you'd prefer.
+                    +b.advantage
+                        +e.icon
+                            svg(class="svg-icon svg-icon-truck")
+                                use(xlink:href='#truck')
+                        +e.body
+                            +e.H2.title EASY SERVICE
+                            +e.P.desc Our online support section is available and regularly updated if you'd prefer.
+                    +b.advantage
+                        +e.icon
+                            svg(class="svg-icon svg-icon-house")
+                                use(xlink:href='#house')
+                        +e.body
+                            +e.H2.title hOME DELIVERY
+                            +e.P.desc Our online support section is available and regularly updated if you'd prefer.
+            +b.main-products
+                .row
+                    +e.column
+                        +e.item_canted
+                        +e.item_canted
+                            +e.link.button.button_outline Shop now
+                    +e.column
+                        +e.item(href="#")
+                        +e.item(href="#")
+                            +e.label New
+                    +e.column_white
+                        +e.big-item(href="#")
+                            +e.title mens / Lifestyle
+                            +e.img-wrap
+                                img(src="./images/to-right-arrow.png")
+    section.section
+        .container
+            +b.collections-header
+                +e.H3.title new collection
+                +e.list
+                    +e.item all
+                    +e.item.active men
+                    +e.item women
+                        +e.count (11)
+                    +e.item shop
+                    +e.item Accessories
+            .catalog-list
+                .row.row_wrap
+                    include components/_product-item
+                    include components/_product-item
+                    include components/_product-item
+                    include components/_product-item
+                    include components/_product-item
+                    include components/_product-item
+    section.section.section_gray
+        .container
+            +b.banner-slider
+                +e.body
+                    +e.H2.title PERSONAL ASSISTENT
+                    +e.P.desc You don’t know what to choose? We will help you.
+                    +e.link.button.button_outline View collection
+    section.section
+        .container
+            +b.collections-header
+                +e.H3.title new collection
+                +e.list
+                    +e.item all
+                    +e.item men
+                    +e.item.active women
+                    +e.item shop
+                    +e.item Accessories
+            .catalog-list
+                .row.row_wrap
+                    include components/_product-item
+                    include components/_product-item
+                    include components/_product-item
+                    include components/_product-item
+            .row
+                +b.coming-soon
+                    +e.wrapper
+                        +e.body
+                            +e.title new   men’s collection
+                            +e.subtitle coming soon
+                +b.coming-soon
+    section.section.section_gray
+        .container
+            h2.lates-news-title Lates news
+            .row.row_wrap
+

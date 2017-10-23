@@ -1,0 +1,16 @@
+@import '../../node_modules/swiper/dist/css/swiper.css';
+@import "helpers/vars";
+
+@import "base/fonts";
+@import "base/reset";
+@import "base/grid";
+@import "base/icons";
+
+@import "components/sections";
+@import "components/buttons";
+@import "components/product-item";
+
+@import "partials/header";
+
+@import "pages/index";
+@import "pages/catalog";

@@ -1,0 +1,26 @@
+.button {
+  display: inline-block;
+
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: 14px;
+  line-height: 55px;
+
+  padding: 0 48px;
+
+  &_filled {
+    background-color: $main-blue-color;
+
+    color: $light-gray-color;
+  }
+
+  &_outline {
+    background-color: transparent;
+    border: 2px solid $dark-gray-color;
+
+    color: $dark-gray-color;
+  }
+}

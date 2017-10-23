@@ -1,0 +1,41 @@
++b.HEADER.header
+    .container
+        +b.pre-header
+            +e.column
+                +e.item(href="tel:(00)-123-456-789")
+                    svg(class="svg-icon")
+                        use(xlink:href='#phone')
+                    +e.item-text.SPAN (00)-123-456-789
+                +e.item(href="mail:weshop@gmail.com")
+                    svg(class="svg-icon")
+                        use(xlink:href='#letter')
+                    +e.item-text.SPAN weshop@gmail.com
+            +e.column
+                +e.item English
+                +e.item USD
+                +e.item Login
+    .container
+        +b.FORM.header-search
+            +e.INPUT.input(placeholder="Search")
+            +e.BUTTON.submin
+                svg(class="svg-icon svg-icon-search")
+                    use(xlink:href='#search')
+    .container
+        .row
+            +e.logo
+                +e.logo-text WESHOP
+            +b.NAV.header-nav
+                +e.UL.list
+                    +e.LI.item Home
+                    +e.LI.item Shop
+                    +e.LI.item Men
+                    +e.LI.item Women
+                    +e.LI.item Page
+                    +e.LI.item Blog
+                    +e.LI.item Contact us
+            +b.header-cart
+                +e.icon-wrap
+                    +e.icon(src="../images/bag.png")
+                    +e.count 2
+                +e.price $25.00
+
