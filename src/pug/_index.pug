@@ -53,7 +53,7 @@ main.main
                         +e.big-item(href="#")
                             +e.title mens / Lifestyle
                             +e.img-wrap
-                                img(src="./images/to-right-arrow.png")
+                                +e.arrow
     section.section
         .container
             +b.collections-header
@@ -67,11 +67,7 @@ main.main
                     +e.item Accessories
             .catalog-list
                 .row.row_wrap
-                    include components/_product-item
-                    include components/_product-item
-                    include components/_product-item
-                    include components/_product-item
-                    include components/_product-item
+                    - for (var a = 0; a < 7; a++)
                     include components/_product-item
     section.section.section_gray
         .container
@@ -92,10 +88,8 @@ main.main
                     +e.item Accessories
             .catalog-list
                 .row.row_wrap
-                    include components/_product-item
-                    include components/_product-item
-                    include components/_product-item
-                    include components/_product-item
+                    - for (var a = 0; a < 5; a++)
+                        include components/_product-item
             .row
                 +b.coming-soon
                     +e.wrapper

@@ -97,9 +97,10 @@
     height: 100%;
   }
 
-  &__item {
+  &__link {
     font-size: 14px;
     color: $light-gray-color;
+    text-decoration: none;
   }
 }
 
@@ -121,6 +122,9 @@
   }
 
   &__icon {
+    @include sprite($spr-bag);
+    background-size: cover;
+
     height: 20px;
     width: 20px;
   }

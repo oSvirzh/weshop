@@ -1,3 +1,14 @@
+-
+    var menuItems = [
+        {name: 'Home', href: '#'},
+        {name: 'Shop', href: '#'},
+        {name: 'Men', href: '#'},
+        {name: 'Women', href: '#'},
+        {name: 'Page', href: '#'},
+        {name: 'Blog', href: '#'},
+        {name: 'Contact us', href: '#'},
+    ]
+
 +b.HEADER.header
     .container
         +b.pre-header
@@ -26,16 +37,12 @@
                 +e.logo-text WESHOP
             +b.NAV.header-nav
                 +e.UL.list
-                    +e.LI.item Home
-                    +e.LI.item Shop
-                    +e.LI.item Men
-                    +e.LI.item Women
-                    +e.LI.item Page
-                    +e.LI.item Blog
-                    +e.LI.item Contact us
+                    each item in menuItems
+                        +e.LI.item
+                            +e.link( href = item.href )=item.name
             +b.header-cart
                 +e.icon-wrap
-                    +e.icon(src="../images/bag.png")
+                    +e.icon
                     +e.count 2
                 +e.price $25.00
 

@@ -176,6 +176,12 @@
 
     margin-bottom: 34px;
   }
+
+  &__arrow {
+    @include sprite($spr-to-right-arrow);
+
+    display: block;
+  }
 }
 
 .collections-header {
