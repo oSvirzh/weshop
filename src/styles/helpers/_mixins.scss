@@ -14,7 +14,7 @@
 
 @mixin sprite-image($sprite) {
   $sprite-image: nth($sprite, 9);
-  background-image: url('../images/sprites/'#{$sprite-image});
+  background-image: url('../images/sprites/#{$sprite-image}');
 }
 
 // @include sprite($sprite);
@@ -24,3 +24,27 @@
   @include sprite-width($sprite);
   @include sprite-height($sprite);
 }
+/*
+@mixin sprite-adaptive($sprite){
+  $sprite-file: '../images/sprites/#{$sprite-image}';
+  $icon-width: nth($sprite, 5);
+  $icon-height: nth($sprite, 6);
+
+  $sprite-width: nth($sprite, 8);
+  $sprite-height: nth($sprite, 7);
+
+  $space-top: nth(sprite, 4);
+
+  @if $space-top == 0 {
+    $space-top: 0px
+  }
+
+  width: percentage($sprite-width / $icon-width);
+  display: block;
+  height: 0;
+  padding-bottom: percentage($icon-height / $icon-width);
+  background-size: 100%;
+  background-position:0 percentage(
+                  -1 * $space-top / ( $sprite-height - $icon-height )
+  );
+}*/

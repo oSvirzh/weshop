@@ -35,3 +35,63 @@
   font-size: 2.3rem;
   fill: $dark-blue-color;
 }
+
+.spr-visa {
+  @include sprite($spr-visa-icon);
+}
+
+.spr-paypal {
+  @include sprite($spr-paypal-icon);
+}
+
+.spr-mastercard {
+  @include sprite($spr-mastercard-icon);
+}
+
+.spr-citi {
+  @include sprite($spr-citi-icon);
+}
+
+.spr-amazon {
+  @include sprite($spr-amazon-icon);
+}
+
+.spr-big-youtube-logo {
+  @include sprite($spr-big-youtube-logo);
+
+  &:hover {
+    @include sprite($spr-big-youtube-logo_hover);
+  }
+}
+
+.spr-facebook-logo {
+  @include sprite($spr-facebook-logo);
+
+  &:hover {
+    @include sprite($spr-facebook-logo_hover);
+  }
+}
+
+.spr-google-plus {
+  @include sprite($spr-google-plus);
+
+  &:hover {
+    @include sprite($spr-google-plus_hover);
+  }
+}
+
+.spr-linkedin-logo {
+  @include sprite($spr-linkedin-logo);
+
+  &:hover {
+    @include sprite($spr-linkedin-logo_hover);
+  }
+}
+
+.spr-twitter-bird-logo {
+  @include sprite($spr-twitter-bird-logo);
+
+  &:hover {
+    @include sprite($spr-twitter-bird-logo_hover);
+  }
+}

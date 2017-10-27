@@ -2,17 +2,20 @@
 @import "helpers/vars";
 @import "helpers/mixins";
 
+@import "base/typography";
 @import "base/sprite";
 @import "base/fonts";
 @import "base/reset";
 @import "base/grid";
 @import "base/icons";
 
+@import "components/logo";
 @import "components/sections";
 @import "components/buttons";
 @import "components/product-item";
 
 @import "partials/header";
+@import "partials/footer";
 
 @import "pages/index";
 @import "pages/catalog";

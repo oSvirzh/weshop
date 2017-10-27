@@ -10,21 +10,6 @@
   &__logo {
     @include span(2);
   }
-
-  &__logo-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-family: $logo-font-family;
-    font-size: 30px;
-    color: #18abb7;
-
-    width: 160px;
-    height: 50px;
-
-    border: 2px solid #18abb7;
-  }
 }
 
 .pre-header {
@@ -42,7 +27,7 @@
     justify-content: center;
     align-items: center;
 
-    color: $light-gray-color;
+    color: $gray-color-color;
     font-size: 12px;
     text-decoration: none;
 
@@ -65,7 +50,7 @@
 
   &__input {
     background-color: transparent;
-    color: $light-gray-color;
+    color: $gray-color-color;
     font-size: 12px;
     border: none;
     border-bottom: 1px solid $smoky-blue-color;
@@ -99,7 +84,7 @@
 
   &__link {
     font-size: 14px;
-    color: $light-gray-color;
+    color: $gray-color-color;
     text-decoration: none;
   }
 }
@@ -117,13 +102,12 @@
     align-items: center;
     width: 35px;
     height: 35px;
-    border: 1px solid $light-gray-color;
+    border: 1px solid $gray-color-color;
     border-radius: 50%;
   }
 
   &__icon {
     @include sprite($spr-bag);
-    background-size: cover;
 
     height: 20px;
     width: 20px;
@@ -141,7 +125,7 @@
     font-size: 12px;
     color: $main-blue-color;
 
-    background-color: $light-gray-color;
+    background-color: $gray-color-color;
     border-radius: 50%;
 
     width: 18px;
@@ -150,7 +134,7 @@
 
   &__price {
     font-size: 14px;
-    color: $light-gray-color;
+    color: $gray-color-color;
 
     margin-left: 17px;
   }

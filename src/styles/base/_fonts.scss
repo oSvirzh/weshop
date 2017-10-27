@@ -1,31 +1,31 @@
-$fonts-dir: '../fonts/';
+$fonts-dir: '../build/fonts/';
 
 @each $file-name, $font-weight, $font-style in
-                (oswald-demibold-webfont, 600, normal) {
+                (oswald-demibold-webfont, 600, normal), {
   @font-face {
     font-family: oswald;
     font-weight: $font-weight;
     font-style: $font-style;
-    src: url('#{$fonts-dir}/#{$file-name}/#{$file-name}.eot');
-    src: url('#{$fonts-dir}/#{$file-name}/#{$file-name}.eot?#iefix') format('embedded-opentype'),
-    url('#{$fonts-dir}/#{$file-name}/#{$file-name}.woff2') format('woff2'),
-    url('#{$fonts-dir}/#{$file-name}/#{$file-name}.woff') format('woff'),
-    url('#{$fonts-dir}/#{$file-name}/#{$file-name}.ttf') format('truetype');
+    src: url('#{$fonts-dir}/#{$file-name}.eot');
+    src: url('#{$fonts-dir}/#{$file-name}.eot?#iefix') format('embedded-opentype');
+    src: url('#{$fonts-dir}/#{$file-name}.woff2') format('woff2');
+    src: url('#{$fonts-dir}/#{$file-name}.woff') format('woff');
+    src: url('#{$fonts-dir}/#{$file-name}.ttf') format('truetype');
   }
 }
 
 @each $file-name, $font-weight, $font-style in
-                (robotoslab-light-webfont, 200, normal),
+                (robotoslab-bold-webfont, 200, normal),
                 (robotoslab-regular-webfont, 400, normal),
-                (robotoslab-bold-webfont, 700, normal) {
+                (robotoslab-bold-webfont, 700, normal), {
   @font-face {
     font-family: RobotoSlab;
     font-weight: $font-weight;
     font-style: $font-style;
-    src: url('#{$fonts-dir}/#{$file-name}/#{$file-name}.eot');
-    src: url('#{$fonts-dir}/#{$file-name}/#{$file-name}.eot?#iefix') format('embedded-opentype'),
-    url('#{$fonts-dir}/#{$file-name}/#{$file-name}.woff2') format('woff2'),
-    url('#{$fonts-dir}/#{$file-name}/#{$file-name}.woff') format('woff'),
-    url('#{$fonts-dir}/#{$file-name}/#{$file-name}.ttf') format('truetype');
+    src: url('#{$fonts-dir}/#{$file-name}.eot');
+    src: url('#{$fonts-dir}/#{$file-name}.eot?#iefix') format('embedded-opentype');
+    src: url('#{$fonts-dir}/#{$file-name}.woff2') format('woff2');
+    src: url('#{$fonts-dir}/#{$file-name}.woff') format('woff');
+    src: url("#{$fonts-dir}/#{$file-name}.ttf") format('truetype');
   }
 }

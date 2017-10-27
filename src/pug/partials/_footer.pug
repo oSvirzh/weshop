@@ -1,0 +1,69 @@
+-
+    var footerItems = [
+        {
+            title: 'support',
+            items: [
+                { name: 'How to Order?', href: '#' },
+                { name: 'Payments', href: '#' },
+                { name: 'Assistance', href: '#' },
+                { name: 'Delivery', href: '#' },
+            ]
+        },
+        {
+            title: 'DUTIES',
+            items: [
+                { name: 'Terms and Conditions', href: '#' },
+                { name: 'Shop Policy', href: '#' },
+                { name: 'Contact Us', href: '#' },
+            ]
+        }
+    ]
+
+-
+    var payments = ['spr-visa', 'spr-paypal', 'spr-mastercard', 'spr-citi', 'spr-amazon']
+
+-
+    var social = ['spr-facebook-logo', 'spr-twitter-bird-logo', 'spr-linkedin-logo', 'spr-big-youtube-logo', 'spr-google-plus']
+
++b.FOOTER.footer
+    .container
+        .row
+            +e.column_first
+                +b.logo
+                    +e.logo-text WESHOP
+                +e.desc USA most-loved online fashion store featuring new deals.
+                +e.desc When it comes to trend, we all love being in it — Seeping every bit of it in WESHOP.com
+
+            each item in footerItems
+                +e.column
+                    +e.title=item.title
+                    +e.UL.list
+                        each subitem in item.items
+                            +e.LI.item
+                                +e.link( href = subitem.href )=subitem.name
+
+
+            +e.column_last
+                +e.title INSTAGRAM FEED
+                +b.instagam-feed
+                    +e.item
+                        +e.img(src = 'http://via.placeholder.com/60x60')
+                    +e.item
+                        +e.img(src = 'http://via.placeholder.com/60x60')
+                    +e.item
+                        +e.img(src = 'http://via.placeholder.com/60x60')
+                    +e.item
+                        +e.img(src = 'http://via.placeholder.com/60x60')
+                +b.payment
+                    each item in payments
+                        +e.item
+                            div(class = item)
+        .row
+            +b.social-icons
+                each item in social
+                    +e.item
+                        .spr-social(class = item)
+
+    +b.footer-copyright
+        .container
+            +e.text &#9400; Copyrights MOHAMMAD SHOAHG. All rights researved 2016

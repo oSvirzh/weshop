@@ -1,6 +1,6 @@
 var gulp          = require('gulp'),
     scss          = require('gulp-sass'),
-    cssmin        = require('gulp-cssmin'),
+    cleanCSS      = require('gulp-clean-css'),
     pug           = require('gulp-pug'),
     concat        = require('gulp-concat'),
     uglify        = require('gulp-uglify'),
@@ -54,9 +54,7 @@ var gulp          = require('gulp'),
 
 gulp.task('js', function() {
     sources.jsSrc()
-        .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
-        .pipe(sourcemaps.write())
         .on('error', console.log)
         .pipe(gulp.dest(paths.dest.root + 'js'));
 });
@@ -68,8 +66,8 @@ gulp.task('scss', function() {
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
         }))
-        .pipe(cssmin())
-        .pipe(sourcemaps.write())
+        .pipe(cleanCSS())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.dest.root + 'css'));
 });
 
@@ -77,9 +75,7 @@ gulp.task('pug', function() {
     var locals = {};
 
     sources.pugSrc()
-        .pipe(sourcemaps.init())
         .pipe(pug({ locals: locals }))
-        .pipe(sourcemaps.write())
         .on('error', console.log)
         .pipe(gulp.dest(paths.dest.root));
 });
@@ -104,6 +100,7 @@ gulp.task('sprite', function() {
                 cssName: '_sprite.scss',
                 cssFormat: 'scss',
                 algorithm: 'binary-tree',
+                padding: 2,
                 cssTemplate: 'spritset.maprules',
                 cssVarMap: function(sprite) {
                     sprite.name = 'spr-' + sprite.name
@@ -112,7 +109,7 @@ gulp.task('sprite', function() {
             }));
 
     spriteData.img.pipe(gulp.dest(paths.dest.root + 'images/sprites')); // путь, куда сохраняем картинку
-    spriteData.css.pipe(gulp.dest('./src/styles/base')); // путь, куда сохраняем стили
+    spriteData.css.pipe(gulp.dest(paths.scss +'base')); // путь, куда сохраняем стили
 });
 
 gulp.task('server',     function() {
@@ -132,7 +129,7 @@ gulp.task('server',     function() {
 gulp.task('compile', [ 'sprite', 'pug', 'scss', 'js', 'images', 'fonts']);
 
 gulp.task('default',    function() {
-    runSequence('watch', 'server');
+    runSequence('sprite' , 'watch', 'server');
 });
 
 gulp.task('watch',  ['compile'], function () {

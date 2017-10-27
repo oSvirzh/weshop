@@ -11,11 +11,12 @@ main.main
                                 +e.link.button.button_filled Shop now
     section.section.section_gray
         .container
-            .row
-                +b.action
-                    +e.text
-                +b.action
-                    +e.text
+            .action-list
+                .row
+                    +b.action
+                        +e.text
+                    +b.action
+                        +e.text
             .advantages-list
                 .row
                     +b.advantage
@@ -23,21 +24,21 @@ main.main
                             svg(class="svg-icon svg-icon-headphones")
                                 use(xlink:href='#headphones')
                         +e.body
-                            +e.H2.title 24/7 Hour Support
+                            +e.title 24/7 Hour Support
                             +e.P.desc Our online support section is available and regularly updated if you'd prefer.
                     +b.advantage
                         +e.icon
                             svg(class="svg-icon svg-icon-truck")
                                 use(xlink:href='#truck')
                         +e.body
-                            +e.H2.title EASY SERVICE
+                            +e.title EASY SERVICE
                             +e.P.desc Our online support section is available and regularly updated if you'd prefer.
                     +b.advantage
                         +e.icon
                             svg(class="svg-icon svg-icon-house")
                                 use(xlink:href='#house')
                         +e.body
-                            +e.H2.title hOME DELIVERY
+                            +e.title hOME DELIVERY
                             +e.P.desc Our online support section is available and regularly updated if you'd prefer.
             +b.main-products
                 .row
@@ -57,7 +58,7 @@ main.main
     section.section
         .container
             +b.collections-header
-                +e.H3.title new collection
+                +e.H1.title.h1 new collection
                 +e.list
                     +e.item all
                     +e.item.active men
@@ -79,7 +80,7 @@ main.main
     section.section
         .container
             +b.collections-header
-                +e.H3.title new collection
+                +e.H1.title.h1 new collection
                 +e.list
                     +e.item all
                     +e.item men
@@ -98,7 +99,8 @@ main.main
                             +e.subtitle coming soon
                 +b.coming-soon
     section.section.section_gray
-        .container
-            h2.lates-news-title Lates news
-            .row.row_wrap
+        +b.lates-news
+            .container
+                +e.H1.title.h1 Lates news
+                .row.row_wrap
 
