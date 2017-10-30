@@ -46,22 +46,17 @@
             +e.column_last
                 +e.title INSTAGRAM FEED
                 +b.instagam-feed
-                    +e.item
-                        +e.img(src = 'http://via.placeholder.com/60x60')
-                    +e.item
-                        +e.img(src = 'http://via.placeholder.com/60x60')
-                    +e.item
-                        +e.img(src = 'http://via.placeholder.com/60x60')
-                    +e.item
-                        +e.img(src = 'http://via.placeholder.com/60x60')
+                    - for (var a = 0; a < 5; a++)
+                        +e.item(href="#")
+                            +e.img(src = 'http://via.placeholder.com/60x60')
                 +b.payment
                     each item in payments
-                        +e.item
+                        +e.item(href="#")
                             div(class = item)
         .row
             +b.social-icons
                 each item in social
-                    +e.item
+                    +e.item(href="#")
                         .spr-social(class = item)
 
     +b.footer-copyright

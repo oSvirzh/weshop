@@ -188,6 +188,8 @@
 
 .collections-header {
   display: flex;
+  align-items: center;
+
   margin-bottom: 45px;
 
   &__list {
@@ -202,6 +204,7 @@
     font-size: 14px;
     color: $dark-blue-color;
     text-transform: uppercase;
+    text-decoration: none;
 
     &:not(:last-child) {
       margin-right: 35px;
@@ -261,6 +264,8 @@
 
   padding: 20px;
 
+  text-decoration: none;
+
   background-color: $smoky-white-color;
 
   &__wrapper {
@@ -298,6 +303,6 @@
   &__title {
     text-align: center;
 
-    margin-bottom: 75px;
+    margin-bottom: 45px;
   }
 }

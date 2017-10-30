@@ -8,7 +8,7 @@ main.main
                             +e.info
                                 h1 fashion is nothing
                                 h2 but mischief
-                                +e.link.button.button_filled Shop now
+                                +e.link.button.button_filled(href="#") Shop now
     section.section.section_gray
         .container
             .action-list
@@ -45,7 +45,7 @@ main.main
                     +e.column
                         +e.item_canted
                         +e.item_canted
-                            +e.link.button.button_outline Shop now
+                            +e.link.button.button_outline(href="#") Shop now
                     +e.column
                         +e.item(href="#")
                         +e.item(href="#")
@@ -60,12 +60,12 @@ main.main
             +b.collections-header
                 +e.H1.title.h1 new collection
                 +e.list
-                    +e.item all
-                    +e.item.active men
-                    +e.item women
+                    +e.item(href="#") all
+                    +e.item.active(href="#") men
+                    +e.item(href="#") women
                         +e.count (11)
-                    +e.item shop
-                    +e.item Accessories
+                    +e.item(href="#") shop
+                    +e.item(href="#") Accessories
             .catalog-list
                 .row.row_wrap
                     - for (var a = 0; a < 7; a++)
@@ -76,17 +76,17 @@ main.main
                 +e.body
                     +e.H2.title PERSONAL ASSISTENT
                     +e.P.desc You don’t know what to choose? We will help you.
-                    +e.link.button.button_outline View collection
+                    +e.link.button.button_outline(href="#") View collection
     section.section
         .container
             +b.collections-header
                 +e.H1.title.h1 new collection
                 +e.list
-                    +e.item all
+                    +e.item(href="#") all
                     +e.item men
-                    +e.item.active women
-                    +e.item shop
-                    +e.item Accessories
+                    +e.item.active(href="#") women
+                    +e.item(href="#") shop
+                    +e.item(href="#") Accessories
             .catalog-list
                 .row.row_wrap
                     - for (var a = 0; a < 5; a++)
@@ -103,4 +103,4 @@ main.main
             .container
                 +e.H1.title.h1 Lates news
                 .row.row_wrap
-
+                    include components/_article-item

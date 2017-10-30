@@ -99,7 +99,7 @@ gulp.task('sprite', function() {
                 imgName: 'sprite.png',
                 cssName: '_sprite.scss',
                 cssFormat: 'scss',
-                algorithm: 'binary-tree',
+                algorithm: 'top-down',
                 padding: 2,
                 cssTemplate: 'spritset.maprules',
                 cssVarMap: function(sprite) {

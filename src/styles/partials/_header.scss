@@ -107,7 +107,7 @@
   }
 
   &__icon {
-    @include sprite($spr-bag);
+    @include sprite-adaptive($spr-bag);
 
     height: 20px;
     width: 20px;

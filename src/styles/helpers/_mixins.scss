@@ -24,27 +24,35 @@
   @include sprite-width($sprite);
   @include sprite-height($sprite);
 }
-/*
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+
 @mixin sprite-adaptive($sprite){
-  $sprite-file: '../images/sprites/#{$sprite-image}';
-  $icon-width: nth($sprite, 5);
-  $icon-height: nth($sprite, 6);
+  &::after {
+    $sprite-image: nth($sprite, 9);
 
-  $sprite-width: nth($sprite, 8);
-  $sprite-height: nth($sprite, 7);
+    $sprite-file: '../images/sprites/#{$sprite-image}';
+    $icon-width: strip-units(nth($sprite, 5));
+    $icon-height: strip-units(nth($sprite, 6));
 
-  $space-top: nth(sprite, 4);
+    $sprite-width: strip-units(nth($sprite, 7));
+    $sprite-height: strip-units(nth($sprite, 8));
 
-  @if $space-top == 0 {
-    $space-top: 0px
+    $space-top: strip-units(nth($sprite, 2));
+
+    background: url('../images/sprites/#{$sprite-image}') no-repeat;
+
+    width: percentage($sprite-width / $icon-width);
+
+    content: ' ';
+    display: inline-block;
+    height: 0;
+    max-width: 100%;
+    padding-bottom: percentage($icon-height / $icon-width);
+    background-size: percentage($sprite-width / $icon-width);
+    background-position: 0 percentage( $space-top / ( $sprite-height - $icon-height ));
   }
-
-  width: percentage($sprite-width / $icon-width);
-  display: block;
-  height: 0;
-  padding-bottom: percentage($icon-height / $icon-width);
-  background-size: 100%;
-  background-position:0 percentage(
-                  -1 * $space-top / ( $sprite-height - $icon-height )
-  );
-}*/
+}

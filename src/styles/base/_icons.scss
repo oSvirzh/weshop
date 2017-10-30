@@ -3,6 +3,7 @@
   width: 1em;
   height: 1em;
   fill: currentColor;
+  font-size: 1em;
 }
 
 .svg-icon-search {
@@ -37,7 +38,7 @@
 }
 
 .spr-visa {
-  @include sprite($spr-visa-icon);
+  @include sprite-adaptive($spr-visa-icon);
 }
 
 .spr-paypal {
@@ -57,41 +58,41 @@
 }
 
 .spr-big-youtube-logo {
-  @include sprite($spr-big-youtube-logo);
+  @include sprite-adaptive($spr-big-youtube-logo);
 
   &:hover {
-    @include sprite($spr-big-youtube-logo_hover);
+    @include sprite-adaptive($spr-big-youtube-logo_hover);
   }
 }
 
 .spr-facebook-logo {
-  @include sprite($spr-facebook-logo);
+  @include sprite-adaptive($spr-facebook-logo);
 
   &:hover {
-    @include sprite($spr-facebook-logo_hover);
+    @include sprite-adaptive($spr-facebook-logo_hover);
   }
 }
 
 .spr-google-plus {
-  @include sprite($spr-google-plus);
+  @include sprite-adaptive($spr-google-plus);
 
   &:hover {
-    @include sprite($spr-google-plus_hover);
+    @include sprite-adaptive($spr-google-plus_hover);
   }
 }
 
 .spr-linkedin-logo {
-  @include sprite($spr-linkedin-logo);
+  @include sprite-adaptive($spr-linkedin-logo);
 
   &:hover {
-    @include sprite($spr-linkedin-logo_hover);
+    @include sprite-adaptive($spr-linkedin-logo_hover);
   }
 }
 
 .spr-twitter-bird-logo {
-  @include sprite($spr-twitter-bird-logo);
+  @include sprite-adaptive($spr-twitter-bird-logo);
 
   &:hover {
-    @include sprite($spr-twitter-bird-logo_hover);
+    @include sprite-adaptive($spr-twitter-bird-logo_hover);
   }
 }
